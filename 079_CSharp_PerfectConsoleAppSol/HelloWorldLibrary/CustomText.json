@@ -1,12 +1,12 @@
 [
   {
-    "languague": "en",
+    "language": "en",
     "translations": {
       "Greeting": "Hello World"
     }
   },
   {
-    "languague": "es",
+    "language": "es",
     "translations": {
       "Greeting": "Hola Mundo"
     }

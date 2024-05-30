@@ -43,14 +43,14 @@ public class Messages : IMessages
                 File.ReadAllText("CustomText.json"), options
             );
 
-            CustomText? messages = messageSets?.Where(x => x.Languge == language).First();
+            CustomText? messages = messageSets?.Where(x => x.Language == language).First();
 
             if (messages is null)
             {
                 throw new NullReferenceException("The specified language was not found in json file");
             }
 
-            return messages.Transltations[key];
+            return messages.Translations[key];
         }
         catch (Exception ex)
         {
