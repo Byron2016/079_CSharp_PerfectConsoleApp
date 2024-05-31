@@ -241,6 +241,25 @@
 			}
 
 
+		- Agregar UnitTest 
+			- Add a xUnit Test Project
+				- Name: HelloWorldTestProject
+				
+			- Add a reference to "HelloWorldLibrary" 
+			- Add a Class "MessagesTest" inside folder "BusinessLogic"
+			
+		- Running from command line 
+			- Go to: "..../079_CSharp_PerfectConsoleApp/bin/Debug/net8.0 "
+			- run: ./079_CSharp_PerfectConsoleApp.exe -lang=es
+				- Error: Unhandled exception. System.FormatException: The short switch '-lang=es' is not defined in the switch mappings.
+					- Cambiar en " App/Run"
+						- DE: if (args[i].ToLower().StartsWith("-lang=")){lang = args[i].Substring(6);
+						- A: if (args[i].ToLower().StartsWith("lang=")){lang = args[i].Substring(5);
+						
+		- Running from debug grap interfase 
+			- Ir a las propiedades del proyecto, sección debug, ahí nos crea un archivo "Launchsettings.json" en donde está el parámetro de entrada: "commandLineArgs": "lang=frr"
+				- 
+
 ---
 
 [⏪(Back to top)](#table-of-contents)

@@ -10,5 +10,11 @@
     "translations": {
       "Greeting": "Hola Mundo"
     }
+  },
+  {
+    "language": "fr",
+    "translations": {
+      "Greeting": "Salut tout le monde"
+    }
   }
 ]

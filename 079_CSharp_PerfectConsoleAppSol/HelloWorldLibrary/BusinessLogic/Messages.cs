@@ -43,7 +43,7 @@ public class Messages : IMessages
                 File.ReadAllText("CustomText.json"), options
             );
 
-            CustomText? messages = messageSets?.Where(x => x.Language == language).First();
+            CustomText? messages = messageSets?.Where(x => x.Language == language).FirstOrDefault();
 
             if (messages is null)
             {
@@ -55,6 +55,7 @@ public class Messages : IMessages
         catch (Exception ex)
         {
             _log.LogError("Error lookin up the custom text", ex);
+            _log.LogError("-----------------------");
             throw;
         }
     }
